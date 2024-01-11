@@ -9,6 +9,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.12.8",
+    "cesium": "^1.113.0",
+    "craco-cesium": "^1.2.0",
     "craco-less": "^3.0.1",
     "path": "^0.12.7",
     "postcss-loader": "^7.3.4",
@@ -18,9 +20,11 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
     "react-scripts": "5.0.1",
-    "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
-    "redux-toolkit": "^1.1.2",
+    "resium": "^1.17.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
