@@ -40,5 +40,8 @@ module.exports = {
         }, {
             plugin: require("craco-cesium")()
         }
-    ]
+    ],
+    devServer: {
+        port: 8080
+    }
 }

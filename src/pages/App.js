@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { Layout, theme } from 'antd';
 import { Outlet } from 'react-router-dom'
-import Normal from './pages/Normal'
-import PageHeader from './pages/Header'
-import './App.less';
+import PageHeader from './Header'
+import IndexModal from '../component/Modals'
 
 const { Content } = Layout;
 
@@ -28,12 +27,10 @@ const App = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          {/* <Routes>
-            <Route path="/normal" component={<Normal />}></Route>
-          </Routes> */}
           <Outlet></Outlet>
         </Layout>
       </Content>
+      <IndexModal />
     </Layout>
   );
 };

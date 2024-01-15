@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Viewer } from 'cesium';
 import 'cesium/Build/Cesium/Widgets/widgets.css';
-import './App.less';
+import style from './index.module.less'
 
-const App = () => {
+const Map = () => {
     useEffect(() => {
         const viewer = new Viewer('cesiumContainer');
 
@@ -13,10 +13,10 @@ const App = () => {
     }, [])
 
     return (
-        <div className="App">
-            <div id="cesiumContainer" style={{ width: '500px', height: '500px' }} />;
+        <div className={style.Map}>
+            <div id="cesiumContainer" style={{ width: '800px', height: '450px' }} />;
         </div>
     );
 };
 
-export default App;
+export default Map;
