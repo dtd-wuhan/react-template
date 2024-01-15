@@ -4,17 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import ReactJson from 'react-json-view';
 import { getAsyncData } from '@/selectors';
 import { fetchList } from '@/reducers/asyncReducer';
+import { validateJSON } from '../../utils'
 import style from './index.module.less'
-
-const validateJSON = (jsonObj) => {
-    try {
-        JSON.parse(JSON.stringify(jsonObj));
-        return true; // 验证通过
-    } catch (error) {
-        console.error('Invalid JSON:', error);
-        return false; // 验证失败
-    }
-};
 
 const Async = () => {
     const { data } = useSelector(getAsyncData)
