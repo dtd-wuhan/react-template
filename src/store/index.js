@@ -8,6 +8,7 @@ import modalReducer from '../reducers/modalReducer'
 const persistConfig = {
     key: "root",
     storage,
+    whiteList: ['rootReducer']
 }
 
 const reducer = combineReducers({

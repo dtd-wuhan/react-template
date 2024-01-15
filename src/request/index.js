@@ -4,7 +4,7 @@ import { URL_TYPE } from '../const/const.common'
 import { message as Message } from "antd";
 
 const isDev = process.env.NODE_ENV === 'development'
-console.log(process.env)
+
 export const baseURL = isDev ? process.env.REACT_APP_BASE_URL : window.globalConfig.BASE_URL
 
 export const fileURL = isDev ? process.env.REACT_APP_FILE_URL : window.globalConfig.FILE_URL

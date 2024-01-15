@@ -6,24 +6,24 @@ import Async from '../pages/Async'
 import Map from '../pages/Map'
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/normal",
-        element: <Normal />
-      },
-      {
-        path: "/async",
-        element: <Async />
-      },
-      {
-        path: "/map",
-        element: <Map />
-      },
-    ],
-  }
+    {
+        path: "/",
+        element: <App />,
+        children: [
+            {
+                path: "/normal",
+                element: <Normal />
+            },
+            {
+                path: "/async",
+                element: <Async />
+            },
+            {
+                path: "/map",
+                element: <Map />
+            },
+        ],
+    }
 ])
 
 export default router

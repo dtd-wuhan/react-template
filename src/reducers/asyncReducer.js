@@ -15,14 +15,14 @@ const asyncListSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchList.pending, (state, action) => {
-                console.log('pengding', action)
-            })
+                
+             })
             .addCase(fetchList.fulfilled, (state, action) => {
                 const { payload } = action
                 console.log('fuilled', action)
                 state.data = payload
             }).addCase(fetchList.rejected, (state, action) => {
-                console.log('rejected', action)
+
             })
     }
 })
