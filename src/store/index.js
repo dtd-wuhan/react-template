@@ -2,6 +2,7 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { persistReducer, persistStore } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import rootReducer from '../reducers'
+import asyncReducer from '../reducers/asyncReducer'
 
 const persistConfig = {
     key: "root",
@@ -9,8 +10,10 @@ const persistConfig = {
 }
 
 const reducer = combineReducers({
-    root: rootReducer
+    root: rootReducer,
+    async: asyncReducer
 })
+
 const persistedReducer = persistReducer(persistConfig, reducer)
 
 const store = configureStore({

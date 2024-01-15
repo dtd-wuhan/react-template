@@ -1,41 +1,41 @@
 import React, { useEffect } from 'react';
-import { Button } from 'antd'
-import { useSelector, useDispatch } from 'react-redux';
-import { Viewer } from 'cesium';
-import 'cesium/Build/Cesium/Widgets/widgets.css';
-import { getStudent, getState } from './selectors';
-import { changeAge, changeSex } from './reducers';
+import { Layout, theme } from 'antd';
+import { Outlet } from 'react-router-dom'
+import Normal from './pages/Normal'
+import PageHeader from './pages/Header'
 import './App.less';
 
-function App() {
-  useEffect(() => {
-    const viewer = new Viewer('cesiumContainer');
+const { Content } = Layout;
 
-    return () => {
-      viewer.destroy()
-    }
-  }, [])
-  // const p = useSelector(getState)
-  // console.log("🚀 ~ App ~ p:", p)
+const App = () => {
 
-  const {name,age,sex} = useSelector(getStudent)
-
-  const dispatch = useDispatch()
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
 
   return (
-    <div className="App">
-      <div id="cesiumContainer" style={{ width: '500px', height: '500px' }} />;
-      <header className="App-header">
-        <div>name:{name}</div>
-        <div>age:{age}</div>
-        <div>sex:{sex}</div>
-        <div>
-          <Button style={{ marginRight: "10px" }} onClick={() => { dispatch(changeAge()) }}>Button</Button>
-          <Button type='primary' onClick={() => { dispatch(changeSex({ sex: sex == "girl" ? "boy" : "girl" })) }}>Button</Button>
-        </div>
-      </header>
-    </div>
+    <Layout>
+      <PageHeader />
+      <Content
+        style={{
+          padding: '24px',
+        }}
+      >
+        <Layout
+          style={{
+            padding: '24px 0',
+            background: colorBgContainer,
+            borderRadius: borderRadiusLG,
+          }}
+        >
+          {/* <Routes>
+            <Route path="/normal" component={<Normal />}></Route>
+          </Routes> */}
+          <Outlet></Outlet>
+        </Layout>
+      </Content>
+    </Layout>
   );
-}
+};
 
 export default App;
