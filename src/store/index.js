@@ -6,9 +6,9 @@ import asyncReducer from '../reducers/asyncReducer'
 import modalReducer from '../reducers/modalReducer'
 
 const persistConfig = {
-    key: "root",
+    key: "stoargeKey",
     storage,
-    whiteList: ['rootReducer']
+    whitelist: ['root']
 }
 
 const reducer = combineReducers({

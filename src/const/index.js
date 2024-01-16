@@ -1,5 +1,2 @@
-import student from './student.const'
-
-export default {
-    student
-}
+export * from './student.const'
+export * from './modal.const'
