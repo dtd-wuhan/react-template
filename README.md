@@ -1,57 +1,63 @@
-├─.env.development
-├─.gitignore
-├─craco.config.js
-├─package.json
-├─README.md
-├─yarn.lock
-├─src
-|  ├─index.css
-|  ├─index.js
-|  ├─setupTests.js
-|  ├─utils
-|  |   ├─eventBus.js
-|  |   ├─index.js
-|  |   └tools.js
-|  ├─theme
+### react-template
+react-template 是一个基于React的前端模板，提供了一些常用的项目配置，希望帮助开发人员快速搭建高质量的Web应用。
+
+
+```js 
+├─.env.development                             // 本地开发环境配置，定义的变量需要以 REACT_APP_ 开头
+├─.gitignore                                   // git 忽略配置
+├─craco.config.js                              // craco配置文件，项目主要配置文件，可以从中覆盖webpack等的配置
+├─package.json                                 // 项目主要的依赖安装包及其版本以及命令，项目描述版本等
+├─README.md                                    // 自述文件
+├─yarn.lock                                    // yarn安装包后，借此锁定包的版本以及包所依赖的包
+├─src                                          // 开发主要工作目录
+|  ├─index.css                                 // 定义的全局样式
+|  ├─index.js                                  // 项目入口文件  
+|  ├─setupTests.js                             // 前端配置代理
+|  ├─utils                                     // 存放通用方法函数  
+|  |   ├─eventBus.js                           // 实例化mitt，可以全局订阅发布   
+|  |   ├─index.js                               
+|  |   └tools.js                               
+|  ├─theme                                     // 项目主题，主要定义antd中的颜色变量 
 |  |   ├─green-theme.js
 |  |   └purple-theme.js
-|  ├─store
+|  ├─store                                     // store配置
 |  |   └index.js
-|  ├─selectors
+|  ├─selectors                                 // 定义方法，从state中获取所需数据
 |  |     └index.js
-|  ├─router
+|  ├─router                                    // 路由配置文件
 |  |   └index.js
-|  ├─request
-|  |    ├─api.js
-|  |    └index.js
-|  ├─reducers
+|  ├─request                                   
+|  |    ├─api.js                               // 存放http api请求，建议按照功能存放   
+|  |    └index.js                              // 封装axios，可以进行request和response的拦截，比如请求头加token或者统一错误处理
+|  ├─reducers                                  // 定义reducer，包括同步异步，state初始化，定义action都在一个文件中 
 |  |    ├─asyncReducer.js
 |  |    ├─index.js
 |  |    ├─modalReducer.js
 |  |    └studentReducer.js
-|  ├─pages
-|  |   ├─App.js
+|  ├─pages                                     // 页面组件，和路由相关的功能                               
+|  |   ├─App.js                                // 入口文件，修改主题，页面基础布局
 |  |   ├─Header.js
 |  |   ├─Normal
 |  |   |   ├─index.js
-|  |   |   └index.module.less
+|  |   |   └index.module.less                  // 只作用于当前页面的样式
 |  |   ├─Map
 |  |   |  ├─index.js
 |  |   |  └index.module.less
 |  |   ├─Async
 |  |   |   ├─index.js
 |  |   |   └index.module.less
-|  ├─const
+|  ├─const                                     // 存放常量，不建议组件中定义常量
 |  |   ├─const.common.js
 |  |   ├─index.js
 |  |   └modal.const.js
-|  ├─component
-|  |     ├─Modals
+|  ├─component                                 // 存放公共组件
+|  |     ├─Modals                              // 模态文件夹
 |  |     |   ├─add.js
 |  |     |   ├─edit.js
-|  |     |   └index.js
-├─public
-|   ├─config.js
+|  |     |   └index.js                         // 模态组件入口，通过类型判断，统一管理
+├─public                                       // 执行yarn build时，public文件夹中的内容默认会复制到dist中
+|   ├─config.js                                // 定义生产环境的地址,本地环境和生产花鸟卷都会生效的配置文件，
 |   ├─favicon.ico
 |   ├─index.html
-|   └setRem.js
+|   └setRem.js                                 // 监听窗口大小并动态设置html根元素的font-size
+```
