@@ -1,6 +1,19 @@
 ### react-template
-react-template 是一个基于React的前端模板，提供了一些常用的项目配置，希望帮助开发人员快速搭建高质量的Web应用。
+`react-template` 是一个基于React的前端模板，提供了一些常用的项目配置，希望帮助开发人员快速搭建高质量的Web应用。
 
+### 模板做了哪些事
+
+#### 模板提供的功能
+  + **craco** 配置，在不eject webpack的前提下，可以修改项目的配置
+  + 引入**antd**，可以使用ant design提供的组件
+  + 引入**px2rem**，基于设计图1920 X 1280，适配大屏相关的项目
+  + 引入 **mitt**, 任意组件之间可以进行事件的订阅和发布
+  + 引入 **@reduxjs/toolkit**，简化redux的使用
+  + 引入 **redux-persist**, 数据持久化
+  + 引入 **cesium**，用于做3D地图相关的项目
+    
+#### 模板如何使用
+    
 
 ```js 
 ├─.env.development                             // 本地开发环境配置，定义的变量需要以 REACT_APP_ 开头
