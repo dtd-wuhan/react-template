@@ -13,7 +13,16 @@
   + 引入 **cesium**，用于做3D地图相关的项目
     
 #### 模板如何使用
-    
+   1.下载模板，运行`yarn` 安装所需包
+   
+   2.运行`yarn start`
+   
+   3.浏览器会打开一个窗口,项目运行地址默认为 http://localhost:8080/
+   
+   4.下面的视频为模板，其中student的数据为持久化数据，在页面刷新后依旧不变
+    [模板预览](https://github.com/dtd-wuhan/react-template/assets/22269482/d04cba12-f8bc-4f3b-996a-82f7c53e523d)
+
+#### 模板的目录及其说明如下
 
 ```js 
 ├─.env.development                             // 本地开发环境配置，定义的变量需要以 REACT_APP_ 开头
