@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom'
+import Login from '../pages/Login'
 import App from '../pages/App';
 import Normal from '../pages/Normal'
 import Async from '../pages/Async'
@@ -8,7 +9,7 @@ import Map from '../pages/Map'
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <Login />,
         children: [
             {
                 path: "/normal",

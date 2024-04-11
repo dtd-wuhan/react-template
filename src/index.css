@@ -20,9 +20,11 @@ code {
 #root {
   height: 100%;
   margin: 0;
+  overflow: hidden;
+  background-color: #fafafa;
 }
 
-.ant-layout{
+.ant-layout {
   height: 100%;
 }
 .ant-layout-header {
