@@ -5,7 +5,7 @@ import { message as Message } from "antd";
 
 const isDev = process.env.NODE_ENV === 'development'
 
-const { BASE_URL, FILE_URL} = window.globalConfig || {}
+const { BASE_URL, FILE_URL } = window.globalConfig || {}
 
 export const baseURL = isDev ? process.env.REACT_APP_BASE_URL : BASE_URL
 
@@ -44,7 +44,7 @@ service.interceptors.response.use(
         const { status, data: { code, message } } = response
 
         if (status == 200) {
-            if (code != 0) {
+            if (code != 0 || code != 200) {
                 Message.error(message)
             }
 

@@ -7,6 +7,7 @@ import { setModal } from '@/reducers/modalReducer';
 import { MODAL_ADD, MODAL_EDIT } from '../../const/modal.const';
 import { EventBus } from '../../utils'
 import style from './index.module.less'
+import { Icon } from '../../component';
 
 const Normal = () => {
     const { name, age, sex } = useSelector(getStudent)
@@ -20,6 +21,7 @@ const Normal = () => {
     }
     return (
         <div className={style.Normal}>
+            <Icon name="shebeiyunweiguanli-x" />
             <Divider>读取并设置state的值</Divider>
             <div>name:{name}</div>
             <div>age:{age}</div>
