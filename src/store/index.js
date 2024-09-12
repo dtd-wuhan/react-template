@@ -8,7 +8,7 @@ import modalReducer from '../reducers/modalReducer'
 const persistConfig = {
     key: "storageKey",
     storage,
-    whitelist: ['root']
+    blacklist: ['root']
 }
 
 const reducer = combineReducers({
@@ -29,4 +29,4 @@ const store = configureStore({
 
 const persistor = persistStore(store)
 
-export { store,  persistor }
+export { store, persistor }
