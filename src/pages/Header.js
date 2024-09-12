@@ -8,16 +8,16 @@ const menuList = [
     {
         label: "同步页面",
         key: "1",
-        url: "/normal"
+        url: "/main/normal"
     }, {
         label: "获取异步数据",
         key: "2",
-        url: '/async'
+        url: '/main/async'
     },
     {
         label: "渲染Cesium",
         key: "3",
-        url: '/map'
+        url: '/main/map'
     },
 ]
 

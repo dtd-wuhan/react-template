@@ -16,7 +16,7 @@ const asyncListSlice = createSlice({
         builder
             .addCase(fetchList.pending, (state, action) => {
 
-             })
+            })
             .addCase(fetchList.fulfilled, (state, action) => {
                 const { payload } = action
 

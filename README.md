@@ -78,7 +78,7 @@
 |  |     |   ├─edit.js
 |  |     |   └index.js                         // 模态组件入口，通过类型判断，统一管理
 ├─public                                       // 执行yarn build时，public文件夹中的内容默认会复制到dist中
-|   ├─config.js                                // 定义生产环境的地址,本地环境和生产花鸟卷都会生效的配置文件，
+|   ├─config.js                                // 定义生产环境的地址,本地环境和生产环境都会生效的配置文件，
 |   ├─favicon.ico
 |   ├─index.html
 |   └setRem.js                                 // 监听窗口大小并动态设置html根元素的font-size

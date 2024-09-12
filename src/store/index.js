@@ -6,7 +6,7 @@ import asyncReducer from '../reducers/asyncReducer'
 import modalReducer from '../reducers/modalReducer'
 
 const persistConfig = {
-    key: "stoargeKey",
+    key: "storageKey",
     storage,
     whitelist: ['root']
 }
@@ -29,4 +29,4 @@ const store = configureStore({
 
 const persistor = persistStore(store)
 
-export { store, persistor }
+export { store,  persistor }

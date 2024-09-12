@@ -5,12 +5,15 @@ import { message as Message } from "antd";
 
 const isDev = process.env.NODE_ENV === 'development'
 
-export const baseURL = isDev ? process.env.REACT_APP_BASE_URL : window.globalConfig.BASE_URL
+const { BASE_URL, FILE_URL} = window.globalConfig || {}
 
-export const fileURL = isDev ? process.env.REACT_APP_FILE_URL : window.globalConfig.FILE_URL
+export const baseURL = isDev ? process.env.REACT_APP_BASE_URL : BASE_URL
+
+export const fileURL = isDev ? process.env.REACT_APP_FILE_URL : FILE_URL
+
 
 const service = axios.create({
-    timeout: 1500000
+    timeout: 15000
 })
 
 service.defaults.transformResponse = [(data) => {
@@ -79,7 +82,7 @@ const request = (url, options = {}, urlType = URL_TYPE.BUSINESS) => {
     let method = options.method || 'get';
     let params = options.params || {};
 
-    if (method === 'get' || method === 'GET') {
+    if (method.toLocaleLowerCase() === 'get') {
         return new Promise((resolve, reject) => {
             service
                 .get(url, {

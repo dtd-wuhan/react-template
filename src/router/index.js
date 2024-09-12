@@ -16,15 +16,15 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                path: "/normal",
+                path: "/main/normal",
                 element: <Normal />
             },
             {
-                path: "/async",
+                path: "/main/async",
                 element: <Async />
             },
             {
-                path: "/map",
+                path: "/main/map",
                 element: <Map />
             },
         ],

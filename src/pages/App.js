@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ConfigProvider, Layout, theme } from 'antd';
 import { Outlet } from 'react-router-dom'
 import PageHeader from './Header'

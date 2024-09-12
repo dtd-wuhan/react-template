@@ -26,6 +26,13 @@ module.exports = {
         alias: {
             '@': path.resolve(__dirname, 'src'),
         },
+        configure: (webpackConfig) => {
+            webpackConfig.stats = {
+                warnings: false, // 隐藏所有警告
+            };
+
+            return webpackConfig;
+        },
     },
     plugins: [
         {
