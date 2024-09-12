@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom'
 import { PersistGate } from 'redux-persist/integration/react';
-import './index.css';
 import { store, persistor } from './store'
 import router from './router';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
