@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Viewer, Ion } from 'cesium';
+import { config } from './config';
 import 'cesium/Build/Cesium/Widgets/widgets.css';
 import style from './index.module.less'
 
@@ -7,7 +8,7 @@ Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3MmY4O
 
 const Map = () => {
     useEffect(() => {
-        const viewer = new Viewer('cesiumContainer');
+        const viewer = new Viewer('cesiumContainer',{...config});
 
         return () => {
             viewer.destroy()
